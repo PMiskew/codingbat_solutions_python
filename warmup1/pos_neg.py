@@ -8,7 +8,6 @@ pos_neg(1, -1, False) → True
 pos_neg(-1, 1, False) → True
 pos_neg(-4, -5, True) → True
 '''
-
 def pos_neg(a, b, negative):
   
   #Approach 1: 
@@ -16,7 +15,7 @@ def pos_neg(a, b, negative):
   #a and b
   '''
   if negative == False:
-    if a < 0 and b >=0 or b < 0 and a >= 0:
+    if (a < 0 and b >=0) or (b < 0 and a >= 0):
       return True
     return False
   if negative == True:
@@ -47,8 +46,15 @@ def pos_neg(a, b, negative):
     return a < 0 and b >=0 or b < 0 and a >= 0
   return a < 0 and b < 0
   #'''
-  
   #Approach 3: Optimization 3
+  #
+  #  XOR MEANS EXCLUSIVE OR
+  #
+  #  a  |  b  || a OR b || a XOR b
+  #  0  |  0  ||   0    ||    0
+  #  0  |  1  ||   1    ||    1
+  #  1  |  0  ||   1    ||    1
+  #  1  |  1  ||   1    ||    0
   '''
   if (negative == False): 
     return  (a < 0) ^ (b < 0)
@@ -62,7 +68,7 @@ def pos_neg(a, b, negative):
   '''
   return (negative == False and ((a < 0 and b >= 0) or (b < 0 and a >= 0))) or (negative == True and a < 0 and b < 0)
   #'''
-  #Approach 4: One Liner using the xor
-  '''
+  #Approach 5: One Liner using the xor
+  
   return (not(negative) and ((a < 0) ^ (b < 0))) or (negative and a < 0 and b < 0)
-  '''
+  #'''
