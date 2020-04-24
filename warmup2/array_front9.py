@@ -7,28 +7,36 @@ array_front9([1, 2, 3, 4, 9]) → False
 array_front9([1, 2, 3, 4, 5]) → False
 
 '''
+
 def array_front9(nums):
   '''
   Two Big Things
-    1.  The function can exit as soon as a 9 is found!
-    2.  We only want to loop through the first four elements, or if the list 
-        is smaller just the lenght
-  1, 2, 3, 4, 9
+  1.  The function can exit as soon as a 9 is found!
+  2.  We only want to loop through the first four elements, or if the list 
+      is smaller just the length
+  '''
+  '''
+  l = 4
   
-  '''
+  if len(nums) < 4:
+    l = len(nums)
+  
 
-  '''
-  if 4 < len(nums):
-    loopLen = 4
-  else:
-    loopLen = len(nums)
-    
-  for i in range(0, loopLen, 1):
+  #l = min(4,len(nums))
+
+  for i in range(0,l,1):
     if nums[i] == 9:
       return True
       
   return False
   '''
   
-  #One Liner
-  #return "9" in "".join(map(str,nums))[0:4]
+  return 9 in nums[0:4]
+  
+  
+  
+  
+  
+  
+  
+
