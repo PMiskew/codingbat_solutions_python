@@ -11,13 +11,38 @@ double_char('Hi-There') → 'HHii--TThheerree'
 
 def double_char(str):
   
-  output = "" #Step 1: Make an empty string to build
+  '''
   
-  #Step 2:  Look at each letter in teh word and add that letter
-  #twince into output
+  for i in range(0, len(str), 1): 
+    <CODE BLOCK>
   
-  for i in range(len(str)):
-    output = output + str[i] + str[i]
-  return output
+        012
+  str = The l = 3
+
+  i = 0       0 < 3 TRUE - RUN LOOP
+    newStr = "TT"
+  i = 1       1 < 3 TRUE - RUN LOOP
+    newStr = "TT" + "hh"
+  i = 2       2 < 3 TRUE - RUN LOOP
+    newStr = "TThh" + "ee"
+  i = 3       3 < 3 FALSE EXIT LOOP
+  '''
+  
+  '''
+  newStr = ""
+  
+  for i in range(0, len(str), 1): 
+    newStr = newStr + str[i] + str[i]
     
+  return newStr
+  '''
+  
+  newStr = ""
+  
+  for i in range(len(str)): 
+    newStr = newStr + str[i] + str[i]
+    
+  return newStr
+  
+  
   
