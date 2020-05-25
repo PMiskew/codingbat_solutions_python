@@ -14,7 +14,7 @@ def sum67(nums):
   #See video in comment Codingbat Compare. In this video we go through
   #a more complex approach, and use it to discuss the difference between
   #java and python. 
-  #https://www.youtube.com/watch?v=6cZJ9FmvXX8&t=2s
+  #shttps://www.youtube.com/watch?v=6cZJ9FmvXX8&t=2s
   
   #Approach 1:
   '''
